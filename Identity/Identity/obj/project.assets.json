@@ -12963,11 +12963,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jafrul Hasan Taj\\source\\repos\\Identity\\Identity\\Identity.csproj",
+      "projectUniqueName": "H:\\work\\Identity\\Identity\\Identity\\Identity.csproj",
       "projectName": "Identity",
-      "projectPath": "C:\\Users\\Jafrul Hasan Taj\\source\\repos\\Identity\\Identity\\Identity.csproj",
+      "projectPath": "H:\\work\\Identity\\Identity\\Identity\\Identity.csproj",
       "packagesPath": "C:\\Users\\Jafrul Hasan Taj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jafrul Hasan Taj\\source\\repos\\Identity\\Identity\\obj\\",
+      "outputPath": "H:\\work\\Identity\\Identity\\Identity\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

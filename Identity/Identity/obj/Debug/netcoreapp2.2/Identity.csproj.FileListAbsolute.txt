@@ -30,3 +30,35 @@ C:\Users\Jafrul Hasan Taj\source\repos\Identity\Identity\obj\Debug\netcoreapp2.2
 C:\Users\Jafrul Hasan Taj\source\repos\Identity\Identity\obj\Debug\netcoreapp2.2\Identity.csproj.CopyComplete
 C:\Users\Jafrul Hasan Taj\source\repos\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Account\Register.g.cshtml.cs
 C:\Users\Jafrul Hasan Taj\source\repos\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.g.cshtml.cs
+H:\work\Identity\Identity\Identity\bin\Debug\netcoreapp2.2\Identity.deps.json
+H:\work\Identity\Identity\Identity\bin\Debug\netcoreapp2.2\Identity.runtimeconfig.json
+H:\work\Identity\Identity\Identity\bin\Debug\netcoreapp2.2\Identity.runtimeconfig.dev.json
+H:\work\Identity\Identity\Identity\bin\Debug\netcoreapp2.2\Identity.dll
+H:\work\Identity\Identity\Identity\bin\Debug\netcoreapp2.2\Identity.pdb
+H:\work\Identity\Identity\Identity\bin\Debug\netcoreapp2.2\Identity.Views.dll
+H:\work\Identity\Identity\Identity\bin\Debug\netcoreapp2.2\Identity.Views.pdb
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Identity.csprojAssemblyReference.cache
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Identity.csproj.CoreCompileInputs.cache
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Identity.RazorAssemblyInfo.cache
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Identity.RazorAssemblyInfo.cs
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Identity.AssemblyInfoInputs.cache
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Identity.AssemblyInfo.cs
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Identity.TagHelpers.input.cache
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Identity.TagHelpers.output.cache
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Identity.RazorCoreGenerate.cache
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.g.cshtml.cs
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Account\Register.g.cshtml.cs
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.g.cshtml.cs
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.g.cshtml.cs
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Identity.RazorTargetAssemblyInfo.cache
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Identity.RazorTargetAssemblyInfo.cs
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Identity.Views.pdb
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Identity.dll
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Identity.pdb
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Identity.csproj.CopyComplete
