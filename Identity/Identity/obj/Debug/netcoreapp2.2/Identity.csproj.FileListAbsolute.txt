@@ -63,3 +63,4 @@ H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Identity.dll
 H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Identity.pdb
 H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Identity.csproj.CopyComplete
 H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Administration\CreateRole.g.cshtml.cs
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Administration\ListRole.g.cshtml.cs
