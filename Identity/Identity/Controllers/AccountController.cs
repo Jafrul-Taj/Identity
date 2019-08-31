@@ -87,8 +87,10 @@ namespace Identity.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new AplicationUser() { UserName = model.Email, Email = model.Email };
-                var result = await signInManager.PasswordSignInAsync(user, model.Password,
+                //var jaf= await userManager.FindByEmailAsync("jfhasan210@gmail.com");
+                
+                //var user = new AplicationUser() { UserName = model.Email, Email = model.Email };
+                var result = await signInManager.PasswordSignInAsync(model.Email, model.Password,
                                                             model.RememberMe, false);
 
                 if (result.Succeeded)
@@ -97,7 +99,7 @@ namespace Identity.Controllers
                 }
 
                
-                    ModelState.AddModelError("", "Invalid Username or Password");
+               ModelState.AddModelError("", "Invalid Username or Password");
                 
             }
             return View();
