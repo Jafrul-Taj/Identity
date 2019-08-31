@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Identity.Models;
 using Identity.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -11,10 +12,10 @@ namespace Identity.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly UserManager<IdentityUser> userManager;
-        private readonly SignInManager<IdentityUser> signInManager;
+        private readonly UserManager<AplicationUser> userManager;
+        private readonly SignInManager<AplicationUser> signInManager;
 
-        public AccountController(UserManager<IdentityUser> userManager,SignInManager<IdentityUser> signInManager)
+        public AccountController(UserManager<AplicationUser> userManager,SignInManager<AplicationUser> signInManager)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
@@ -56,7 +57,7 @@ namespace Identity.Controllers
         {
             if(ModelState.IsValid)
             {
-                var user = new IdentityUser() { UserName = model.Email, Email = model.Email };
+                var user = new AplicationUser() { UserName = model.Email, Email = model.Email, City= model.City };
                 var result= await userManager.CreateAsync(user, model.Password);
 
                 if (result.Succeeded)
@@ -86,7 +87,7 @@ namespace Identity.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser() { UserName = model.Email, Email = model.Email };
+                var user = new AplicationUser() { UserName = model.Email, Email = model.Email };
                 var result = await signInManager.PasswordSignInAsync(user, model.Password,
                                                             model.RememberMe, false);
 
