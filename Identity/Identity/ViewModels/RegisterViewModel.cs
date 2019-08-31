@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Identity.Utilities;
+using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -10,6 +12,8 @@ namespace Identity.ViewModels
     {
         [Required]
         [EmailAddress]
+        [Remote(action:"IsEmailInUse",controller:"Account")]
+        [ValidEmailDomain(alloweDomain:("gmail.com"),ErrorMessage ="Email domain must be gmail.com")]
         public string Email { get; set; }
 
         [Required]
