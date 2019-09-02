@@ -6,9 +6,13 @@ using Identity.ViewModels;
 using Identity.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace Identity.Controllers
+
 {
+    [Authorize(Roles ="Admin")]
     public class AdministrationController : Controller
     {
         private readonly RoleManager<IdentityRole> roleManager;
@@ -199,5 +203,7 @@ namespace Identity.Controllers
 
             return RedirectToAction("EditRole",new { Id=roleId });
         }
+
+       
     }
 }

@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Identity.Controllers
 {
+    [Authorize]
     public class AccountController : Controller
     {
         private readonly UserManager<AplicationUser> userManager;
@@ -102,6 +103,12 @@ namespace Identity.Controllers
                ModelState.AddModelError("", "Invalid Username or Password");
                 
             }
+            return View();
+        }
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult AccessDenied()
+        {
             return View();
         }
     }
