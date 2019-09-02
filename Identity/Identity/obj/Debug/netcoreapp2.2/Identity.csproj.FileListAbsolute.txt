@@ -65,3 +65,4 @@ H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Identity.csproj.CopyC
 H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Administration\CreateRole.g.cshtml.cs
 H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Administration\ListRole.g.cshtml.cs
 H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Administration\EditRole.g.cshtml.cs
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Administration\EditUsersInRole.g.cshtml.cs
