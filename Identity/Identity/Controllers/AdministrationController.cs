@@ -31,6 +31,13 @@ namespace Identity.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult ListUsers()
+        {
+            var users= userManager.Users;
+            return View(users);
+        }
+
         [HttpPost]
         public async Task<IActionResult> CreateRole(CreateRoleViewModel model)
         {
