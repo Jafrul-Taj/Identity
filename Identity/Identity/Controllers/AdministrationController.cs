@@ -88,6 +88,31 @@ namespace Identity.Controllers
                 
             return View(model);
         }
+        public async Task<ActionResult> DeleteUser( string id)
+        {
+            var user = await userManager.FindByIdAsync(id);
+            if (user == null)
+            {
+                ViewBag.ErrorMessage = $"User cannot be found";
+                return View("NotFound");
+            }
+            else
+            {
+                var result = await userManager.DeleteAsync(user);
+
+                if(result.Succeeded)
+                {
+                    return RedirectToAction("ListUsers", "Administration");
+                }
+
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+
+                return View("ListUsers", "Administration");
+            }
+        }
 
         [HttpPost]
         public async Task<IActionResult> CreateRole(CreateRoleViewModel model)
