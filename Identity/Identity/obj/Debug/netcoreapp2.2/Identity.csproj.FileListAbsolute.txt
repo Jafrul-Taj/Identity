@@ -68,3 +68,4 @@ H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Administr
 H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Administration\EditUsersInRole.g.cshtml.cs
 H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Account\AccessDenied.g.cshtml.cs
 H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Administration\ListUsers.g.cshtml.cs
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Administration\EditUser.g.cshtml.cs
