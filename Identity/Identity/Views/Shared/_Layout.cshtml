@@ -92,8 +92,12 @@
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
+        @if (IsSectionDefined("Scripts"))
+        {
+            @RenderSection("Scripts",required: true);
+        }
     </div>
-   
+    
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2019 - Identity - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>

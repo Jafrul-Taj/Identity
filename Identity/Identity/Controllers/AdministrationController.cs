@@ -88,6 +88,7 @@ namespace Identity.Controllers
                 
             return View(model);
         }
+        [HttpPost]
         public async Task<ActionResult> DeleteUser( string id)
         {
             var user = await userManager.FindByIdAsync(id);
@@ -111,6 +112,30 @@ namespace Identity.Controllers
                 }
 
                 return View("ListUsers", "Administration");
+            }
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> DeleteRole(string id)
+        {
+            var role = await roleManager.FindByIdAsync(id);
+            if (role == null)
+            {
+                ViewBag.ErrorMessage = $"Role cannot be found";
+                return View("NotFound");
+            }
+            else
+            {
+                var result = await roleManager.DeleteAsync(role);
+                if(result.Succeeded)
+                {
+                    return RedirectToAction("ListRole", "Administration");
+                }
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+                return View("ListRole", "Administration");
             }
         }
 

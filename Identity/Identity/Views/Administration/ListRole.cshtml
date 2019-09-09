@@ -18,10 +18,12 @@
             </div>
 
             <div class="card-footer">
-                <a  asp-action="EditRole" asp-controller="Administration" asp-route-id="@role.Id"
-                   class="btn btn-primary">Edit</a>
-                <a  asp-action="ListRole" asp-controller="Administration"
-                   class="btn btn-primary">Cancel</a>
+                <form asp-action="DeleteRole" asp-route-id="@role.Id" method="post">
+                    <a asp-action="EditRole" asp-controller="Administration" asp-route-id="@role.Id"
+                       class="btn btn-primary">Edit</a>
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete user : @role.Name')">Delete</button>
+                </form>
+
             </div>
         </div>
     }
