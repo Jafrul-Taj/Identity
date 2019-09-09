@@ -26,6 +26,77 @@ namespace Identity.Controllers
         }
 
         [HttpGet]
+        public async Task<ActionResult> ManageUserRoles(string userid)
+        {
+            ViewBag.userId = userid;
+
+            var user = await userManager.FindByIdAsync(userid);
+
+            if (user == null)
+            {
+                ViewBag.Erroe = $"This role cann't be found";
+                return View("Not Found");
+            }
+
+            var model = new List<UserRolesViewModel>();
+
+            foreach (var role in roleManager.Roles)
+            {
+                var userRolesViewModel = new UserRolesViewModel
+                {
+                    RoleId = role.Id,
+                    RoleName = role.Name,
+
+                };
+
+                if (await userManager.IsInRoleAsync(user, role.Name))
+                {
+                    userRolesViewModel.isSeleted = true;
+                }
+                else
+                {
+                    userRolesViewModel.isSeleted = false;
+                }
+                model.Add(userRolesViewModel);
+            }
+            return View(model);
+        }
+
+         [HttpPost]
+        public async Task<ActionResult> ManageUserRoles(List<UserRolesViewModel> model ,string userid)
+        {
+            
+            var user = await userManager.FindByIdAsync(userid);
+
+            if (user == null)
+            {
+                ViewBag.Erroe = $"This role cann't be found";
+                return View("Not Found");
+            }
+
+            var roles = await userManager.GetRolesAsync(user);
+            var result = await userManager.RemoveFromRolesAsync(user, roles);
+            
+            if(!result.Succeeded)
+            {
+                ModelState.AddModelError("","Cannot remove user existinf roles");
+                return View(model);
+            }
+
+            result = await userManager.AddToRolesAsync(user,
+                model.Where(x=>x.isSeleted).Select(y=>y.RoleName));
+
+            if(!result.Succeeded)
+            {
+                ModelState.AddModelError("", "Cannot remove user existinf roles");
+                return View(model);
+            }
+            return RedirectToAction("EditUser", new {Id=userid });
+        }
+
+
+
+        [HttpGet]
         public IActionResult CreateRole()
         {
             return View();
@@ -308,7 +379,6 @@ namespace Identity.Controllers
                         return RedirectToAction("EditRole", new { Id = roleId });
                 }
             }
-
             return RedirectToAction("EditRole",new { Id=roleId });
         }
 
