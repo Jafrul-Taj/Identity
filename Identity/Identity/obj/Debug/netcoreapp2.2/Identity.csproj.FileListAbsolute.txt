@@ -70,3 +70,4 @@ H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Account\A
 H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Administration\ListUsers.g.cshtml.cs
 H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Administration\EditUser.g.cshtml.cs
 H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Administration\ManageUserRoles.g.cshtml.cs
+H:\work\Identity\Identity\Identity\obj\Debug\netcoreapp2.2\Razor\Views\Administration\ManageUserClaims.g.cshtml.cs
