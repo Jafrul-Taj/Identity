@@ -12,7 +12,7 @@ using System.Security.Claims;
 namespace Identity.Controllers
 
 {
-    [Authorize(Roles ="Admin")]
+    [Authorize(Policy = "AdminRolePolicy")]
     public class AdministrationController : Controller
     {
         private readonly RoleManager<IdentityRole> roleManager;
@@ -110,6 +110,7 @@ namespace Identity.Controllers
         }
 
         [HttpGet]
+        [Authorize(Policy = "AdminRolePolicy")]
         public async Task<IActionResult> EditUser(string id)
         {
             var user = await userManager.FindByIdAsync(id);
@@ -134,6 +135,7 @@ namespace Identity.Controllers
         }
 
         [HttpPost]
+        [Authorize(Policy = "AdminRolePolicy")]
         public async Task<IActionResult> EditUser(EditUserViewModel model)
         {
             var user = await userManager.FindByIdAsync(model.Id);
