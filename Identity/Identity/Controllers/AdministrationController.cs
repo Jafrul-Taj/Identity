@@ -12,7 +12,7 @@ using System.Security.Claims;
 namespace Identity.Controllers
 
 {
-    
+    [Authorize(Roles ="Admin")]
     public class AdministrationController : Controller
     {
         private readonly RoleManager<IdentityRole> roleManager;
