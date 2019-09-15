@@ -63,7 +63,7 @@ namespace Identity.Controllers
         }
 
          [HttpPost]
-        public async Task<ActionResult> ManageUserRoles(List<UserRolesViewModel> model ,string userid)
+        public async Task<ActionResult> ManageUserRoles(List<UserRolesViewModel> model, string userid)
         {
             
             var user = await userManager.FindByIdAsync(userid);
@@ -84,17 +84,15 @@ namespace Identity.Controllers
             }
 
             result = await userManager.AddToRolesAsync(user,
-                model.Where(x=>x.isSeleted).Select(y=>y.RoleName));
+                model.Where(x => x.isSeleted).Select(y => y.RoleName));
 
-            if(!result.Succeeded)
+            if (!result.Succeeded)
             {
                 ModelState.AddModelError("", "Cannot remove user existinf roles");
                 return View(model);
             }
-            return RedirectToAction("EditUser", new {Id=userid });
+            return RedirectToAction("EditUser", new { Id = userid });
         }
-
-
 
         [HttpGet]
         public IActionResult CreateRole()
@@ -127,7 +125,7 @@ namespace Identity.Controllers
                 Id = id,
                 UserName = user.UserName,
                 City = user.City,
-                Claims = userClaims.Select(c => c.Value).ToList(),
+                Claims = userClaims.Select(c => c.Type+" : "+ c.Value).ToList(),
                 Roles = userRoles.ToList()
             };
 
@@ -410,7 +408,7 @@ namespace Identity.Controllers
                     ClaimType = claim.Type
                 };
 
-                if(exitingUserClaims.Any(c => c.Type==claim.Type))
+                if(exitingUserClaims.Any(c => c.Type==claim.Type && c.Value=="true"))
                 {
                     userClaim.isSeleted = true;
                 }
@@ -441,7 +439,7 @@ namespace Identity.Controllers
             }
 
             result = await userManager.AddClaimsAsync(user,
-                model.claim.Where(c => c.isSeleted).Select(c => new Claim(c.ClaimType, c.ClaimType)));
+                model.claim.Select(c => new Claim(c.ClaimType, c.isSeleted ? "true" : "false" )));
 
             if(!result.Succeeded)
             {
