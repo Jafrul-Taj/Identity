@@ -12,7 +12,7 @@ using System.Security.Claims;
 namespace Identity.Controllers
 
 {
-    [Authorize(Policy = "AdminRolePolicy")]
+  //  [Authorize(Policy = "AdminRolePolicy")]
     public class AdministrationController : Controller
     {
         private readonly RoleManager<IdentityRole> roleManager;
@@ -65,18 +65,14 @@ namespace Identity.Controllers
          [HttpPost]
         public async Task<ActionResult> ManageUserRoles(List<UserRolesViewModel> model, string userid)
         {
-            
             var user = await userManager.FindByIdAsync(userid);
-
             if (user == null)
             {
                 ViewBag.Erroe = $"This role cann't be found";
                 return View("Not Found");
             }
-
             var roles = await userManager.GetRolesAsync(user);
             var result = await userManager.RemoveFromRolesAsync(user, roles);
-            
             if(!result.Succeeded)
             {
                 ModelState.AddModelError("","Cannot remove user existinf roles");
@@ -108,7 +104,7 @@ namespace Identity.Controllers
         }
 
         [HttpGet]
-        [Authorize(Policy = "AdminRolePolicy")]
+        [Authorize(Policy = "EditRolePolicy")]
         public async Task<IActionResult> EditUser(string id)
         {
             var user = await userManager.FindByIdAsync(id);
